@@ -16,7 +16,7 @@ const ukraine = new Country('Ukraine', 'Kyiv', 37_900_000, 603_628);
 const canada = new Country('Canada', 'Ottawa', 41_500_000, 9_985_000);
 
 function printCountryProps(country) {
-    for (const key in country) {
+    for (let key in country) {
         if (typeof country[key] !== 'function') {
             console.log(`${key}: ${country[key].toLocaleString()}`);
         }
