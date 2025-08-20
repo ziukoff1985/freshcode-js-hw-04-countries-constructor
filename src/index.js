@@ -12,13 +12,13 @@ function Country(title, capital, population, area) {
     };
 }
 
-const ukraine = new Country('Ukraine', 'Kyiv', 37900000, 603628);
-const canada = new Country('Canada', 'Ottawa', 41500000, 9985000);
+const ukraine = new Country('Ukraine', 'Kyiv', 37_900_000, 603_628);
+const canada = new Country('Canada', 'Ottawa', 41_500_000, 9_985_000);
 
-function printObjProp(country) {
+function printCountryProps(country) {
     for (const key in country) {
         if (typeof country[key] !== 'function') {
-            console.log(`${key}: ${country[key]}`);
+            console.log(`${key}: ${country[key].toLocaleString()}`);
         }
     }
 }
@@ -26,9 +26,7 @@ function printObjProp(country) {
 console.log(ukraine.showCountry());
 console.log('==================================');
 console.log(canada.showCountry());
-
 console.log('==================================');
-
-printObjProp(ukraine);
+printCountryProps(ukraine);
 console.log('==================================');
-printObjProp(canada);
+printCountryProps(canada);
